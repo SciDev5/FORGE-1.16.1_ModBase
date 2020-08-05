@@ -1,0 +1,8 @@
+{
+  "item.modbase.test_item": "Test item lol",
+  "block.modbase.test_block": "Block of Test",
+  "itemGroup.test": "Test Creative Tab",
+  "advancements.modadv.root.title": "Test advancement",
+  "advancements.modadv.root.description": "KABOOOM!!!!",
+  "entity.modbase.test_entity": "Test Subject"
+}
