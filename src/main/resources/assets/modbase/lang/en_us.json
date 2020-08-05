@@ -1,5 +1,7 @@
 {
   "item.modbase.test_item": "Test item lol",
+  "item.modbase.test_food": "Taste test",
+  "item.modbase.test_tool": "Test pickaxe",
   "block.modbase.test_block": "Block of Test",
   "itemGroup.test": "Test Creative Tab",
   "advancements.modadv.root.title": "Test advancement",
