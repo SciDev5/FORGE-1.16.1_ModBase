@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+	"modbase:test_block",
+	"minecraft:dirt",
+	"minecraft:sponge"
+  ]
+}

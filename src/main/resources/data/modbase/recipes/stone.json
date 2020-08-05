@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "modbase:test_item_tag"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:stone",
+    "count": 127
+  }
+}
