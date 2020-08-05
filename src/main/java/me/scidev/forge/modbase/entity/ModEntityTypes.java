@@ -1,12 +1,14 @@
 package me.scidev.forge.modbase.entity;
 
 import me.scidev.forge.modbase.ModBase;
+import me.scidev.forge.modbase.client.render.entity.TestEntityRenderer;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -19,6 +21,9 @@ public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.
 	
 	public static void registerAllEntityAttributes() {
 		GlobalEntityTypeAttributes.put(TEST_ENTITY.get(), TestEntity.setCustomAttributes().create());
+	}
+	public static void registerEntityRenderers() {
+		RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.TEST_ENTITY.get(), TestEntityRenderer::new);
 	}
 	
 	// Entities
