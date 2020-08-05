@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "modbase:test_block"
+  },
+  "result": "modbase:test_tool",
+  "count": 1
+}

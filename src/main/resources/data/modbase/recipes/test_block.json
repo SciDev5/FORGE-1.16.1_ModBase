@@ -1,21 +1,31 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern":
-  [
-    "xxx",
-    "xxx",
-    "xxx"
-  ],
-  "key":
-  {
-    "x":
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
     {
       "item": "modbase:test_item"
+    },
+    {
+      "item": "modbase:test_item"
+    },
+    {
+      "item": "modbase:test_item"
+    },
+    {
+      "item": "modbase:test_item"
+    },
+    {
+      "item": "modbase:test_item"
+    },
+    {
+      "item": "modbase:test_item"
+    },
+    {
+      "item": "minecraft:stone"
     }
-  },
+  ],
   "result":
   {
     "item": "modbase:test_block",
-    "count": 2
+    "count": 1
   }
 }

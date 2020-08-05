@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "modbase:test_tool"
+  },
+  "result": "modbase:test_item",
+  "experience": 1.0,
+  "cookingtime": 100
+}
