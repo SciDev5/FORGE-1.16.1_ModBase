@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x x",
+    "xxx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "modbase:test_item"
+    }
+  },
+  "result":
+  {
+    "item": "modbase:test_chestplate",
+    "count": 1
+  }
+}

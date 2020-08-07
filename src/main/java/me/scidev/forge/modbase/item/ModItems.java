@@ -1,8 +1,11 @@
 package me.scidev.forge.modbase.item;
 
 import me.scidev.forge.modbase.ModBase;
+import me.scidev.forge.modbase.armor.ModArmorMaterial;
 import me.scidev.forge.modbase.block.ModBlocks;
 import me.scidev.forge.modbase.itemGroup.ModItemGroups;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemGroup;
@@ -20,7 +23,6 @@ public class ModItems {
 
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ModBase.MOD_ID);
 	
-	
 	public static void init(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}
@@ -32,4 +34,10 @@ public class ModItems {
 	
 	// ItemBlocks
 	public static final RegistryObject<Item> TEST_BLOCK_ITEM = ITEMS.register("test_block",SimpleBlockItem.simpleSupplier(ModBlocks.TEST_BLOCK));
+
+	// Armor
+	public static final RegistryObject<Item> TEST_HELMET = ITEMS.register("test_helmet", () -> new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.HEAD, new Properties().group(DEFAULT_ITEM_GROUP)));
+	public static final RegistryObject<Item> TEST_CHESTPLATE = ITEMS.register("test_chestplate", () -> new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.CHEST, new Properties().group(DEFAULT_ITEM_GROUP)));
+	public static final RegistryObject<Item> TEST_LEGGINGS = ITEMS.register("test_leggings", () -> new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.LEGS, new Properties().group(DEFAULT_ITEM_GROUP)));
+	public static final RegistryObject<Item> TEST_BOOTS = ITEMS.register("test_boots", () -> new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.FEET, new Properties().group(DEFAULT_ITEM_GROUP)));
 }
