@@ -3,6 +3,7 @@ package me.scidev.forge.modbase.item;
 import me.scidev.forge.modbase.ModBase;
 import me.scidev.forge.modbase.armor.ModArmorMaterial;
 import me.scidev.forge.modbase.block.ModBlocks;
+import me.scidev.forge.modbase.entity.ModEntityTypes;
 import me.scidev.forge.modbase.itemGroup.ModItemGroups;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -41,4 +42,7 @@ public class ModItems {
 	public static final RegistryObject<Item> TEST_CHESTPLATE = ITEMS.register("test_chestplate", () -> new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.CHEST, new Properties().group(DEFAULT_ITEM_GROUP)));
 	public static final RegistryObject<Item> TEST_LEGGINGS = ITEMS.register("test_leggings", () -> new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.LEGS, new Properties().group(DEFAULT_ITEM_GROUP)));
 	public static final RegistryObject<Item> TEST_BOOTS = ITEMS.register("test_boots", () -> new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.FEET, new Properties().group(DEFAULT_ITEM_GROUP)));
+	
+	// Spawn Eggs
+	public static final RegistryObject<Item> TEST_ENTITY_SPAWN_EGG = ITEMS.register("test_entity_spawn_egg", () -> new ModSpawnEggItem(ModEntityTypes.TEST_ENTITY, 0x00FF00, 0x0000FF, new Properties().group(DEFAULT_ITEM_GROUP)));
 }

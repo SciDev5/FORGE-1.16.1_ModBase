@@ -25,8 +25,8 @@ public class ModBase {
 	public ModBase() throws Exception {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		ModEntityTypes.init(eventBus);
 		ModBlocks.init(eventBus);
 		ModItems.init(eventBus);
-		ModEntityTypes.init(eventBus);
 	}
 }

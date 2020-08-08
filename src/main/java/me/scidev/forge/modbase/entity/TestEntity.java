@@ -1,5 +1,6 @@
 package me.scidev.forge.modbase.entity;
 
+import me.scidev.forge.modbase.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
@@ -11,10 +12,12 @@ import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion.Mode;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -61,5 +64,10 @@ public class TestEntity extends MonsterEntity {
 	@Override
 	public boolean canSpawn(IWorld worldIn, SpawnReason spawnReasonIn) {
 		return worldIn.getLight(this.getOnPosition()) > 10;
+	}
+	
+	@Override
+	public ItemStack getPickedResult(RayTraceResult target) {
+		return new ItemStack(ModItems.TEST_ENTITY_SPAWN_EGG.get());
 	}
 }
