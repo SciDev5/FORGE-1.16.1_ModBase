@@ -25,7 +25,7 @@ public class TestItem extends Item {
 		playerIn.setMotion(0d, 3d, 0d);
 		playerIn.setHealth((playerIn.getHealth()+1f)%20f);
 		ItemStack itemStak = playerIn.getHeldItem(handIn);
-		itemStak.setCount(itemStak.getCount()*2);
+		itemStak.setCount(itemStak.getCount()/2);
 		worldIn.createExplosion(playerIn, playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), 34, Mode.BREAK);
 		return new ActionResult<ItemStack>(ActionResultType.PASS,itemStak);
 	}

@@ -23,6 +23,7 @@ public class TestBlock extends Block {
 	public TestBlock() {
 		super(
 			Properties.create(Material.CACTUS, MaterialColor.CYAN)
+			.setRequiresTool()
 			.hardnessAndResistance(0f, 30f)
 			.jumpFactor(43f)
 			.harvestLevel(3)
@@ -34,8 +35,10 @@ public class TestBlock extends Block {
 	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
 		worldIn.destroyBlock(pos, true);
 		worldIn.playSound(player, pos, new SoundEvent(new ResourceLocation("minecraft", "block.note_block.bit")), SoundCategory.MASTER, 1f, 2f);
-		
-		ResourceLocation ltrl = this.getRegistryName();
+
+		ResourceLocation ltrl = ModBlocks.TEST_ORE.get().getLootTable();
+		ModBase.LOGGER.log(Level.INFO,ltrl.getNamespace()+":"+ltrl.getPath());
+		ltrl = ModBlocks.TEST_BLOCK.get().getRegistryName();
 		ModBase.LOGGER.log(Level.INFO,ltrl.getNamespace()+":"+ltrl.getPath());
 		return ActionResultType.SUCCESS;
 	}

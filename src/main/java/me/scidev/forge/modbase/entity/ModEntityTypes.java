@@ -27,5 +27,5 @@ public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.
 	}
 	
 	// Entities
-	public static final RegistryObject<EntityType<TestEntity>> TEST_ENTITY = ENTITIES.register("test_entity", () -> EntityType.Builder.create(TestEntity::new, EntityClassification.MISC).size(0.5f, 0.5f).build(new ResourceLocation(ModBase.MOD_ID, "test_entity").toString()));
+	public static final RegistryObject<EntityType<TestEntity>> TEST_ENTITY = ENTITIES.register("test_entity", () -> EntityType.Builder.create(TestEntity::new, EntityClassification.MONSTER).size(0.5f, 0.5f).build(new ResourceLocation(ModBase.MOD_ID, "test_entity").toString()));
 }

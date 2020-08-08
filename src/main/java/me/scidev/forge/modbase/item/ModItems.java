@@ -29,11 +29,12 @@ public class ModItems {
 	
 	// Items
 	public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item", () -> new TestItem());
-	public static final RegistryObject<Item> TEST_TOOL_ITEM = ITEMS.register("test_tool", () -> new PickaxeItem(ModItemTier.TEST, 1, -2.8f, new Properties().group(DEFAULT_ITEM_GROUP)));
-	public static final RegistryObject<Item> TEST_FOOD_ITEM = ITEMS.register("test_food", () -> new FoodItem(FoodItem.createSimpleFood(4, 10)));
+	public static final RegistryObject<Item> TEST_TOOL = ITEMS.register("test_tool", () -> new PickaxeItem(ModItemTier.TEST, 1, -2.8f, new Properties().group(DEFAULT_ITEM_GROUP)));
+	public static final RegistryObject<Item> TEST_FOOD = ITEMS.register("test_food", () -> new FoodItem(FoodItem.createSimpleFood(4, 10)));
 	
 	// ItemBlocks
 	public static final RegistryObject<Item> TEST_BLOCK_ITEM = ITEMS.register("test_block",SimpleBlockItem.simpleSupplier(ModBlocks.TEST_BLOCK));
+	public static final RegistryObject<Item> TEST_ORE_ITEM = ITEMS.register("test_ore",SimpleBlockItem.simpleSupplier(ModBlocks.TEST_ORE));
 
 	// Armor
 	public static final RegistryObject<Item> TEST_HELMET = ITEMS.register("test_helmet", () -> new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.HEAD, new Properties().group(DEFAULT_ITEM_GROUP)));
